@@ -20,7 +20,7 @@ class Hotel(Base):
     longitude = Column(Float)
     room_type = Column(String)
     price = Column(String)
-    image_url = Column(String)
+    #image_url = Column(String)
     image_path = Column(String)
 
 def get_engine():

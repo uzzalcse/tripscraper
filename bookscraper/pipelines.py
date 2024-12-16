@@ -21,7 +21,7 @@ class PostgresPipeline:
             longitude=item['longitude'],
             room_type=item['room_type'],
             price=item['price'],
-            image_url=item['image_url'],
+            #image_url=item['image_url'],
             image_path=item['image_path']
         )
         self.session.add(hotel)

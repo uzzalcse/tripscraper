@@ -9,5 +9,5 @@ class HotelItem(scrapy.Item):
     longitude = scrapy.Field()
     room_type = scrapy.Field()
     price = scrapy.Field()
-    image_url = scrapy.Field()
+    #image_url = scrapy.Field()
     image_path = scrapy.Field()
