@@ -1,0 +1,50 @@
+images/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+*.egg-info/
+
+# Scrapy settings
+.scrapy*
+
+# Log files
+*.log
+
+# Local settings
+local_settings.py
+
+# SQLite database
+db.sqlite3
+
+# Other directories that might be created
+*.sqlite
+*.db
+
+# IDE-specific files
+*.idea/
+*.iml
+*.suo
+*.swp
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Test files
+*.test
+
+# Scrapy cache
+.scrapy*
+
+# Custom cache
+.scrapy*.cache
+
+# Python cache
+*.pyo
+*.pyc
