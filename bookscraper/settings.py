@@ -24,4 +24,15 @@ ITEM_PIPELINES = {
 }
 
 # Set the database URL
-DATABASE_URL = 'postgresql://postgres:emon@localhost:5432/postgres'
+#DATABASE_URL = 'postgresql://postgres:emon@localhost:5432/postgres'
+
+# Database configuration
+DATABASE = {
+    'drivername': 'postgresql',
+    'host': 'localhost',
+    'port': '5432',
+    'username': 'postgres',  # Replace with your username
+    'password': 'emon',      # Replace with your password
+    'database': 'postgres'   # Replace with your database name
+}
+
