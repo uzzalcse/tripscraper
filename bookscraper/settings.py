@@ -33,6 +33,6 @@ DATABASE = {
     'port': '5432',
     'username': 'postgres',  # Replace with your username
     'password': 'emon',      # Replace with your password
-    'database': 'postgres'   # Replace with your database name
+    'database': 'uzzaldb'   # Replace with your database name
 }
 
