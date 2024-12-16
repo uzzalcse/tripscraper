@@ -12,7 +12,7 @@ class Hotel(Base):
     __tablename__ = 'hotels'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    city_name = Column(String, nullable=False)
+    #city_name = Column(String, nullable=False)
     property_title = Column(String, nullable=False)
     rating = Column(Float)
     location = Column(String)
