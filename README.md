@@ -116,15 +116,21 @@ Password: admin
 
 ### Stop the docker
 
-``` docker compose down```
+``` 
+docker compose down 
+```
 
 ### Rebuild the project 
 
-```docker compose build```
+```
+docker compose build
+```
 
 ### Then run
 
-``` docker compose up```
+``` 
+docker compose up
+```
 
 
 
