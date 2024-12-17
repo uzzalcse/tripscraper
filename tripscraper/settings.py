@@ -1,4 +1,4 @@
-# Scrapy settings for bookscraper project
+# Scrapy settings for tripscraper project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,8 +9,8 @@
 
 BOT_NAME = "bookscraper"
 
-SPIDER_MODULES = ["bookscraper.spiders"]
-NEWSPIDER_MODULE = "bookscraper.spiders"
+SPIDER_MODULES = ["tripscraper.spiders"]
+NEWSPIDER_MODULE = "tripscraper.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -20,7 +20,7 @@ NEWSPIDER_MODULE = "bookscraper.spiders"
 ROBOTSTXT_OBEY = True
 # Activate the PostgresPipeline
 ITEM_PIPELINES = {
-    'bookscraper.pipelines.PostgresPipeline': 300,
+    'tripscraper.pipelines.PostgresPipeline': 300,
 }
 
 # Set the database URL

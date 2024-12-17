@@ -38,6 +38,7 @@ db.sqlite3
 
 # Test files
 *.test
+.coverage
 
 # Scrapy cache
 .scrapy*

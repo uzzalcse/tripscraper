@@ -1,11 +1,11 @@
 import unittest
 from unittest.mock import patch, Mock
-from bookscraper.models import Hotel, get_engine, get_session, create_tables
+from tripscraper.models import Hotel, get_engine, get_session, create_tables
 
 class TestModels(unittest.TestCase):
-    @patch('bookscraper.models.create_engine')
+    @patch('tripscraper.models.create_engine')
     def test_get_engine(self, mock_create_engine):
-        with patch('bookscraper.models.settings.DATABASE', {
+        with patch('tripscraper.models.settings.DATABASE', {
             'drivername': 'postgresql',
             'username': 'test',
             'password': 'test',
@@ -16,7 +16,7 @@ class TestModels(unittest.TestCase):
             get_engine()
             mock_create_engine.assert_called_once()
 
-    @patch('bookscraper.models.sessionmaker')
+    @patch('tripscraper.models.sessionmaker')
     def test_get_session(self, mock_sessionmaker):
         mock_engine = Mock()
         mock_session = Mock()

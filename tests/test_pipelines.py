@@ -1,16 +1,16 @@
 import unittest
 from unittest.mock import Mock, patch
-from bookscraper.pipelines import PostgresPipeline
-from bookscraper.items import HotelItem
+from tripscraper.pipelines import PostgresPipeline
+from tripscraper.items import HotelItem
 
 class TestPostgresPipeline(unittest.TestCase):
     def setUp(self):
         self.pipeline = PostgresPipeline()
         self.spider = Mock()
 
-    @patch('bookscraper.pipelines.get_engine')
-    @patch('bookscraper.pipelines.create_tables')
-    @patch('bookscraper.pipelines.get_session')
+    @patch('tripscraper.pipelines.get_engine')
+    @patch('tripscraper.pipelines.create_tables')
+    @patch('tripscraper.pipelines.get_session')
     def test_open_spider(self, mock_get_session, mock_create_tables, mock_get_engine):
         mock_engine = Mock()
         mock_get_engine.return_value = mock_engine
@@ -29,7 +29,7 @@ class TestPostgresPipeline(unittest.TestCase):
         self.pipeline.close_spider(self.spider)
         self.pipeline.session.close.assert_called_once()
 
-    @patch('bookscraper.pipelines.Hotel')
+    @patch('tripscraper.pipelines.Hotel')
     def test_process_item(self, mock_hotel):
         self.pipeline.session = Mock()
         item = HotelItem(

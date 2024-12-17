@@ -3,7 +3,7 @@ import shutil
 import unittest
 from unittest.mock import Mock, patch
 from scrapy.http import TextResponse, Request
-from bookscraper.spiders.city_hotels_spider import CityAndHotelsSpider
+from tripscraper.spiders.city_hotels_spider import CityAndHotelsSpider
 
 class TestCityAndHotelsSpider(unittest.TestCase):
     def setUp(self):
@@ -15,29 +15,29 @@ class TestCityAndHotelsSpider(unittest.TestCase):
         if os.path.exists('images'):
             shutil.rmtree('images')
 
-    # def test_clear_previous_data(self):
-    #     # Create a test directory
-    #     os.makedirs('images', exist_ok=True)
-    #     test_file = os.path.join('images', 'test.txt')
-    #     with open(test_file, 'w') as f:
-    #         f.write('test')
+    def test_clear_previous_data(self):
+        # Create a test directory
+        os.makedirs('images', exist_ok=True)
+        test_file = os.path.join('images', 'test.txt')
+        with open(test_file, 'w') as f:
+            f.write('test')
 
-    #     self.spider.clear_previous_data()
-    #     self.assertTrue(os.path.exists('images'))
-    #     self.assertTrue(len(os.listdir('images')) == 0)
+        self.spider.clear_previous_data()
+        self.assertTrue(os.path.exists('images'))
+        self.assertTrue(len(os.listdir('images')) == 0)
 
-    # @patch('scrapy.Spider.logger')
-    # def test_parse_with_valid_data(self, mock_logger):
-    #     script_content = '''
-    #     window.IBU_HOTEL = {
-    #         "initData": {
-    #             "htlsData": {
-    #                 "inboundCities": [{"id": "123", "name": "London"}],
-    #                 "outboundCities": [{"id": "456", "name": "Paris"}]
-    #             }
-    #         }
-    #     };
-    #     '''
+    @patch('scrapy.Spider.logger')
+    def test_parse_with_valid_data(self, mock_logger):
+        script_content = '''
+        window.IBU_HOTEL = {
+            "initData": {
+                "htlsData": {
+                    "inboundCities": [{"id": "123", "name": "London"}],
+                    "outboundCities": [{"id": "456", "name": "Paris"}]
+                }
+            }
+        };
+        '''
         self.sample_response.xpath = Mock(return_value=[Mock(get=Mock(return_value=script_content))])
         
         results = list(self.spider.parse(self.sample_response))

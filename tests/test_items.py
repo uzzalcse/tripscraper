@@ -1,5 +1,5 @@
 import pytest
-from bookscraper.items import HotelItem
+from tripscraper.items import HotelItem
 
 def test_hotel_item():
     item = HotelItem(
