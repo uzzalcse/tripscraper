@@ -111,7 +111,20 @@ Log in using:
 Email: admin@admin.com
 Password: admin
 ```
+## If it does not fetch data or any error occurrs please `stop the docker` and consider rebuild the project using following commands
 
+
+### Stop the docker
+
+``` docker compose down```
+
+### Rebuild the project 
+
+```docker compose build```
+
+### Then run
+
+``` docker compose up```
 
 
 
