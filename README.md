@@ -104,9 +104,11 @@ tripscraper/
 
 ## To see result first go to the following link
 
-http://127.0.0.1:8080/ Log in using: 
+http://127.0.0.1:8080/   
+Log in using: 
 
-```Email: admin@admin.com
+```
+Email: admin@admin.com
 Password: admin
 ```
 
