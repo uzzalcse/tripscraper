@@ -84,7 +84,7 @@ tripscraper/
 
 4. **Set Up PostgreSQL Database**
 
-   Go to the official postgre website and download the datbase according to your OS. https://www.postgresql.org/download/ 
+   Go to the official postgre website and download the database according to your OS. https://www.postgresql.org/download/ 
    
 
  
