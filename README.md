@@ -65,6 +65,11 @@ tripscraper/
    cd tripscraper
 
    ```
+
+
+
+
+
 3. **Install Python Dependencies**
 
 
@@ -82,7 +87,50 @@ tripscraper/
    pip install -r requirements.txt
    ```
 
-4. **Set Up PostgreSQL Database**
+
+5. **Build the project using dokcer**
+
+   ```bash
+   docker compose build
+
+   ```
+
+6. **Run the project using docker**
+
+  ```bash
+   docker compose up
+
+   ```
+
+## To see result first go to the following link
+
+http://127.0.0.1:8080/ Log in using: 
+
+```Email: admin@admin.com
+Password: admin
+```
+
+
+
+
+## Connect pg admin with the postgresql database using the following things. Look for `hotels` table.  
+
+
+```
+DATABASE = {
+    'drivername': 'postgresql',
+    'host': 'db',
+    'port': '5432',
+    'username': 'postgres', 
+    'password': 'postgres',     
+    'database': 'trip_scraper'  
+}
+
+```
+
+
+
+7. **Set Up PostgreSQL Database(If you don't use docker)**
 
    Go to the official postgre website and download the database according to your OS. https://www.postgresql.org/download/ 
    
@@ -96,14 +144,14 @@ tripscraper/
     'host': 'localhost',
     'port': '5432',
     'username': 'postgres',  # Replace with your username
-    'password': 'password',      # Replace with your password
-    'database': 'uzzaldb'   # Replace with your database name
+    'password': 'postgres',      # Replace with your password
+    'database': 'trip_scraper'   # Replace with your database name
     }
    ```
 
 
 
-## Running the Scraper
+## Running the Scraper(If you don't use docker)
 
 1. **Basic Command**
 

@@ -14,10 +14,10 @@ ITEM_PIPELINES = {
 # Database configuration
 DATABASE = {
     'drivername': 'postgresql',
-    'host': 'localhost',
+    'host': 'db',
     'port': '5432',
     'username': 'postgres',  # Replace with your username
-    'password': 'password',      # Replace with your password
-    'database': 'uzzaldb'   # Replace with your database name
+    'password': 'postgres',      # Replace with your password
+    'database': 'trip_scraper'   # Replace with your database name
 }
 
