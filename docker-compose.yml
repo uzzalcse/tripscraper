@@ -1,3 +1,7 @@
+networks:
+  default:
+    name: trip_scraper_default  # Custom name for the default network
+
 services:
   scraper:
     build: .
@@ -8,9 +12,12 @@ services:
     depends_on:
       - db
     command: scrapy crawl city_hotels
+    networks:
+      - default
 
   db:
     image: postgres:latest
+    container_name: postgres_container_trip_scraper
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -19,6 +26,8 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - default
 
   pgadmin:
     image: dpage/pgadmin4
@@ -31,7 +40,8 @@ services:
       - db
     volumes:
       - pgadmin_data:/var/lib/pgadmin
-
+    networks:
+      - default
 
 volumes:
   postgres_data:

@@ -21,6 +21,7 @@ class Hotel(Base):
     price = Column(String)
     image_path = Column(String)
 
+
 def get_engine():
     db = settings.DATABASE
     db_url = f"{db['drivername']}://{db['username']}:{db['password']}@{db['host']}:{db['port']}/{db['database']}"
